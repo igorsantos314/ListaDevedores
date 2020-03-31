@@ -1,7 +1,7 @@
 class Login:
 
     def __init__(self, user, password):
-        self.street = '/home/igor/Área de trabalho/ListaDeDevedores/'
+        self.street = '/home/igor/Área de trabalho/ListaDeDevedores/Clientes/'
 
         self.user = user
         self.password = password

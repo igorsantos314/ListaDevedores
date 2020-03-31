@@ -48,5 +48,3 @@ class interfaceListClientes:
 
         except TclError:
             messagebox.showerror('','Por favor, Selecione um Cliente !')
-    
-interfaceListClientes()

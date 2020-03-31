@@ -17,8 +17,6 @@ class listClientes:
 
     #sets
     def setListaC(self):
+        #lista todos os diretorios
         self.listaC = os.listdir(self.getStreet()).copy()
-
-a = listClientes()
-print(a.getListaC())
 

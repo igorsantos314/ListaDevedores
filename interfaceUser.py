@@ -83,4 +83,4 @@ class interfaceCliente:
 
         self.etNome.focus()
 
-interfaceCliente()
+#interfaceCliente()

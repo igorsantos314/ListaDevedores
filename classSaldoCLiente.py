@@ -45,6 +45,6 @@ class saldoDevedor:
         with open('{}/Historico.txt'.format(self.getStreet()), 'a') as cliente:
             cliente.write(hist)
 
-a = saldoDevedor('IGOR SANTOS')
-a.debitarSaldo(50)
-a.creditarSaldo(20)
+#a = saldoDevedor('IGOR SANTOS')
+#a.debitarSaldo(50)
+#a.creditarSaldo(20)

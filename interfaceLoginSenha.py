@@ -6,7 +6,7 @@ from tkinter import messagebox
 class interfaceLogin:
 
     def __init__(self):
-
+        
         #Font style and size
         fontStyle = 'Arial 10'
 
@@ -30,7 +30,7 @@ class interfaceLogin:
         self.etPassword.place(x=100, y=50)
 
         #Button
-        self.btAuthencation = Button(text='Autenticar', font=fontStyle, width=15, height=1, command=self.verify)
+        self.btAuthencation = Button(self.window, text='Autenticar', font=fontStyle, width=15, height=1, command=self.verify)
         self.btAuthencation.place(x=70, y=80)
 
         self.window.mainloop()

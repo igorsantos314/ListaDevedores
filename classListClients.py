@@ -19,4 +19,6 @@ class listClientes:
     def setListaC(self):
         #lista todos os diretorios
         self.listaC = os.listdir(self.getStreet()).copy()
+        self.listaC.remove('User.txt')
+        self.listaC.remove('HistoricoGeral')
 

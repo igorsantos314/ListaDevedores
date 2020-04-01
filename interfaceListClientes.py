@@ -1,6 +1,8 @@
 from classListClients import listClientes
-from tkinter import messagebox
+from interfaceSaldoClient import interfaceSaldoCliente
+from interfaceHistorico import interfaceHistorico
 
+from tkinter import messagebox
 from tkinter import *
 
 class interfaceListClientes:
@@ -15,7 +17,7 @@ class interfaceListClientes:
         self.window.resizable(False, False)
 
         #titulo
-        self.lblTitulo = Label(text='LISTA DE CLINTES', font=fontStyle)
+        self.lblTitulo = Label(self.window, text='LISTA DE CLINTES', font=fontStyle)
         self.lblTitulo.pack()
 
         #listBox e barra de rolagem
@@ -29,8 +31,12 @@ class interfaceListClientes:
         self.addItensListBox()
 
         #Button abrir cliente
-        btOpen = Button(text='ACESSAR CLIENTE', height=1, width=15, font=fontStyle, command=self.getClienteSelecionado)
-        btOpen.pack()
+        btOpen = Button(self.window, text='ACESSAR CLIENTE', height=1, width=20, font=fontStyle, command=self.getClienteSelecionado)
+        btOpen.pack(side=RIGHT)
+
+        #Button abrir Historico
+        btOpenHist = Button(self.window, text='ACESSAR HISTORICO', height=1, width=20, font=fontStyle, command=self.getHistoricoCliente)
+        btOpenHist.pack(side=LEFT)
 
         self.scrollbar.config(command=self.listbox.get)
         self.window.mainloop()
@@ -44,7 +50,19 @@ class interfaceListClientes:
     def getClienteSelecionado(self):
         try:
             indice = self.listbox.curselection()
-            print(self.listbox.get(indice))
+
+            #exibir janela de saldo
+            interfaceSaldoCliente(self.listbox.get(indice))
+
+        except TclError:
+            messagebox.showerror('','Por favor, Selecione um Cliente !')
+
+    def getHistoricoCliente(self):
+        try:
+            indice = self.listbox.curselection()
+
+            #exibir janela de saldo
+            interfaceHistorico(self.listbox.get(indice))
 
         except TclError:
             messagebox.showerror('','Por favor, Selecione um Cliente !')

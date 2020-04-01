@@ -1,4 +1,5 @@
 from classLoginSenha import Login
+from interfaceMenuPrincipal import interfaceMenu
 
 from tkinter import *
 from tkinter import messagebox
@@ -49,7 +50,8 @@ class interfaceLogin:
         if newUser.authenticateLogin():
             messagebox.showinfo('','Bem Vindo(a) !')
             self.window.destroy()
-
+            interfaceMenu()
+        
         else:
             messagebox.showerror('','Acesso Negado !')
             self.clearCamps()

@@ -56,7 +56,6 @@ class interfaceCliente:
     def getEntryCpf(self):
         return self.etCpf.get()
 
-
     def getEntryIdade(self):
         return self.etIdade.get()
 

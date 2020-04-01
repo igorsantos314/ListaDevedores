@@ -20,7 +20,7 @@ class interfaceSaldoCliente:
         self.window.resizable(False, False)
 
         #titulo
-        self.lblTitulo = Label(text='Saldo Devedor', font=fontStyleDadosUser)
+        self.lblTitulo = Label(self.window, text='Saldo Devedor', font=fontStyleDadosUser)
         self.lblTitulo.pack()
 
         #labels
@@ -44,10 +44,10 @@ class interfaceSaldoCliente:
         self.changeSaldo.place(x=200, y=90)
 
         #buttons
-        self.btRealizarPagamento = Button(text='PAGAMENTO', font=fontStyleDadosUser, width=10, height=2, fg='white', bg='green', command=lambda: self.autentication(1))
+        self.btRealizarPagamento = Button(self.window, text='PAGAMENTO', font=fontStyleDadosUser, width=10, height=2, fg='white', bg='green', command=lambda: self.autentication(1))
         self.btRealizarPagamento.place(x=100, y=140)
 
-        self.btRealizarCompra = Button(text='COMPRA', font=fontStyleDadosUser, width=10, height=2, fg='white', bg='red', command=lambda: self.autentication(2))
+        self.btRealizarCompra = Button(self.window, text='COMPRA', font=fontStyleDadosUser, width=10, height=2, fg='white', bg='red', command=lambda: self.autentication(2))
         self.btRealizarCompra.place(x=280, y=140)
 
         #chamar Funcoes
